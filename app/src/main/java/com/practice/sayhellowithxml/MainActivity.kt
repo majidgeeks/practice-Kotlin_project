@@ -1,6 +1,8 @@
 package com.practice.sayhellowithxml
 
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    fun btnClicked(view: View) {
+        val txtHi : TextView = findViewById(R.id.textView)
+        txtHi.setText("Say Hi by Click Btn")
     }
 }
